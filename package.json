@@ -1,0 +1,21 @@
+{
+  "name": "personal-webserver",
+  "version": "1.0.0",
+  "description": "The webserver for my personal website",
+  "main": "index.js",
+  "repository": "https://github.com/Kluddizz/personal-webserver",
+  "author": "Kluddizz <flhansen.93@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

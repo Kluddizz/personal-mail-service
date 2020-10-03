@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const express = require("express");
 const cors = require("cors");
+const log = require("./log");
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -23,6 +25,16 @@ fs.readdirSync(routesPath).forEach((filename) => {
   if (path.extname(routePath) == ".js") {
     const routeName = path.basename(filename, ".js");
     const route = require(routePath);
+
+    route.use((err, req, res, next) => {
+      log(err.message);
+
+      res.status(400).json({
+        status: 400,
+        message: "An error occured",
+      });
+    });
+
     app.use(`/${routeName}`, route);
   }
 });

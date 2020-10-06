@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 test("Receive a new message", async () => {
   expect.assertions(2);
 
-  const request = await fetch(`http://localhost:5000/mails`, {
+  const request = await fetch(`http://localhost:5000/mail`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

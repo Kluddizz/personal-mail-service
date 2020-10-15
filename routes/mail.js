@@ -1,6 +1,6 @@
 const db = require("../db");
 const ash = require("../wrap-async");
-const log = require("../log");
+const log = require("@kluddizz/log");
 const nodemailer = require("nodemailer");
 const express = require("express");
 const router = express.Router();

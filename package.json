@@ -1,5 +1,5 @@
 {
-  "name": "personal-webserver",
+  "name": "personal-mail-service",
   "version": "1.0.0",
   "description": "The webserver for my personal website",
   "main": "index.js",
@@ -12,6 +12,7 @@
     "test": "jest --runInBand --forceExit --detectOpenHandles --verbose"
   },
   "dependencies": {
+    "@kluddizz/log": "^1.0.0",
     "cors": "^2.8.5",
     "dateformat": "^3.0.3",
     "express": "^4.17.1",
